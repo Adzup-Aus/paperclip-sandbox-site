@@ -1,0 +1,47 @@
+---
+const services = [
+  { name: 'Website audits', blurb: 'We check your pages for problems.' },
+  { name: 'Fixes', blurb: 'We fix what the audit finds.' },
+  { name: 'Reports', blurb: 'You get a short report each month.' },
+];
+---
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="hero">
+      <img src="/hero.png" width="1200" />
+      <h2>Sandbox Site</h2>
+      <h1>A small site for testing</h1>
+      <p>This page is here to be audited. Nothing on it is real.</p>
+      <a href="/contact">Get in touch</a>
+      <a href="/pricing.html">See pricing</a>
+    </div>
+
+    <div class="services">
+      <h4>What we do</h4>
+      {services.map((s) => (
+        <div>
+          <h3>{s.name}</h3>
+          <p>{s.blurb}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="footer">
+      <p>Copyright 2019 Sandbox Site</p>
+      <a href="https://example.com/terms" target="_blank">Terms</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </body>
+</html>
+
+<style>
+  body { font-family: sans-serif; margin: 0; color: #999; background: #fff; }
+  .hero { padding: 40px; }
+  .services { padding: 40px; }
+  .footer { padding: 40px; font-size: 10px; }
+</style>
